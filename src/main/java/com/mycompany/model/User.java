@@ -35,6 +35,18 @@ public class User {
     @NotNull(message = "Podaj hasło")
     private String password;
 
+    @ManyToOne
+    @JoinColumn(name = "rentalCompany_id")
+    private RentalCompany rentalCompany;
+
+    public RentalCompany getRentalCompany() {
+        return rentalCompany;
+    }
+
+    public void setRentalCompany(RentalCompany rentalCompany) {
+        this.rentalCompany = rentalCompany;
+    }
+
     public Long getId(){
         return id;
     }

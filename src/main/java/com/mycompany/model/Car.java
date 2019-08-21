@@ -22,6 +22,18 @@ public class Car {
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private Set<CarModel> carModels;
 
+    @ManyToOne
+    @JoinColumn(name = "rentalCompany_id")
+    private RentalCompany rentalCompany;
+
+    public RentalCompany getRentalCompany() {
+        return rentalCompany;
+    }
+
+    public void setRentalCompany(RentalCompany rentalCompany) {
+        this.rentalCompany = rentalCompany;
+    }
+
     private double pricePerDay;
 
     public Long getId() {
