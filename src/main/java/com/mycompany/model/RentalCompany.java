@@ -20,7 +20,7 @@ public class RentalCompany {
     @OneToMany(mappedBy = "rentalCompany", cascade = CascadeType.ALL)
     private Set<Car> car;
 
-    @OneToMany(mappedBy = "", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "rentalCompany", cascade = CascadeType.ALL)
     private Set<User> user;
 
     private String city;
