@@ -19,12 +19,24 @@ public class Car {
 
     private String name;
 
+    private String modelName;
+
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private Set<CarModel> carModels;
 
     @ManyToOne
     @JoinColumn(name = "rentalCompany_id")
     private RentalCompany rentalCompany;
+
+    private double pricePerDay;
+
+    public String getModelName() {
+        return modelName;
+    }
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
 
     public RentalCompany getRentalCompany() {
         return rentalCompany;
@@ -34,7 +46,6 @@ public class Car {
         this.rentalCompany = rentalCompany;
     }
 
-    private double pricePerDay;
 
     public Long getId() {
         return id;

@@ -17,8 +17,6 @@ public class CarModel {
     @Column(name = "carModel_id")
     private Long id;
 
-    private String modelName;
-
     private String colour;
 
     private CarType carType;
@@ -36,14 +34,6 @@ public class CarModel {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getModelName() {
-        return modelName;
-    }
-
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
     }
 
     public String getColour() {
